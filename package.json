@@ -1,0 +1,29 @@
+{
+  "name": "sit725-2022-t1-prac5",
+  "version": "1.0.0",
+  "description": "week 5 prac for SIT 725 2022",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChoudharyNavit22/sit725-2022-t1-prac5.git"
+  },
+  "keywords": [
+    "Express",
+    "NodeJs"
+  ],
+  "author": "Navit Choudhary",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChoudharyNavit22/sit725-2022-t1-prac5/issues"
+  },
+  "homepage": "https://github.com/ChoudharyNavit22/sit725-2022-t1-prac5#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongodb": "^4.4.1"
+  }
+}
