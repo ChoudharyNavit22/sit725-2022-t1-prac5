@@ -20,15 +20,18 @@ app.use('/api/user',userRoute)
 const addNumbers = (number1, number2) => {
     var num1 = parseInt(number1)
     var num2 = parseInt(number2)
-    var result = num1 + num2;
+    var result = (num1 + num2) || null;
     return result;
 }
 
-app.get("/addTwoNumbers",(req,res) => {
-    var number1 = req.query.number1;
-    var number2 = req.query.number2;
+app.get("/addTwoNumbers/:firstNumber/:secondNumber",(req,res) => {
+    var number1 = req.params.firstNumber;
+    var number2 = req.params.secondNumber;
     var result = addNumbers(number1,number2)
-    res.json({statusCode: 200, data: result, message:"Success"})
+    if(result == null) {
+        res.json({result: result, statusCode: 400}).status(400)
+      }
+      else { res.json({result: result, statusCode: 200}).status(200) } 
 })
 
 var port = process.env.port || 3000;

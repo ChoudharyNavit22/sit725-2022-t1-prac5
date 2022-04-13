@@ -4,7 +4,8 @@
   "description": "week 5 prac for SIT 725 2022",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,12 @@
   },
   "homepage": "https://github.com/ChoudharyNavit22/sit725-2022-t1-prac5#readme",
   "dependencies": {
+    "chai": "^4.3.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "mongodb": "^4.4.1"
+    "mocha": "^9.2.2",
+    "mongodb": "^4.4.1",
+    "request": "^2.88.2"
   }
 }
