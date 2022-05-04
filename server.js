@@ -45,6 +45,10 @@ io.on('connection', (socket) => {
     socket.emit('number', new Date().toISOString());
   }, 1000);
 
+  setInterval(()=>{
+    socket.emit('random_number', parseInt(Math.random()*10));
+  }, 3000);
+
 });
 
 
